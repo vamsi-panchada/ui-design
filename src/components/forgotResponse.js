@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
-import "./RegiserResonse.css";
+import "./forgotResponse.css";
 
-export default class RegisterResonse extends Component {
+export default class ForgotResonse extends Component {
   render() {
     return (
       <div class='register'>
@@ -12,14 +12,16 @@ export default class RegisterResonse extends Component {
             </p><br />
         </div>
 
+        <p class='requstaccess'>
+            Forgot Password
+            </p>
+
         <div className='responseMessage'>
-            <p>Thanks Srinivasan for your interest, We have requested admin to verify and approval. Watchout your email for welcome email with magic link for us.</p>
-            <p>You can also write us at admin@maya.ai</p>
+            <p>Email has been sent to your inbox (srinivasan@crayondata.com) with magic link to reset your credential.</p>
+                <p>Reset magic link is valid for next 30 minutes</p>
         </div>
 
-        <a href='/forgotPassword'>Forgot Password</a>
-        <a href='/register'>Register</a>
-
+        <p>Go back to <a href='/'>login</a></p>
         <div className='footer'>
             <img className='crayonlogo' src='crayon-logo.png' />
             <p>2020 All Rights Reserved by Crayon Data Pte Ltd and it’s registered trademark maya.ai</p>

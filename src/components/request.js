@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./request.css";
 
 
@@ -8,6 +9,7 @@ const Form = () => {
     const [reason, setReason] = useState("");
     const [password, setPassword] = useState("");
     const [email_copy, setEmailCopy] = useState();
+    const navigate = useNavigate();
   
     const handleChange = (event) => {
       const { name, value } = event.target;
@@ -27,6 +29,8 @@ const Form = () => {
   
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        // console.log('Submitted');
       
         // Validate the form data
         if (!name || !email) {
@@ -40,13 +44,9 @@ const Form = () => {
         formData.append("reason", reason);
         formData.append("password", password);
         formData.append('sendEmailCopy', email_copy);
-      
-        fetch("/submit-Request", {
-          method: "POST",
-          body: formData,
-        }).then((response) => {
-          
-        });
+
+
+        navigate('/submit-request');
       };
   
     return (

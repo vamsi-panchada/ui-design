@@ -1,10 +1,13 @@
 import React from 'react';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 import './App.css';
 import Login from './components/login';
 import Register from './components/request';
 import RegisterResonse from './components/RegisterResponse';
+import Forgot from './components/forgot';
+import ForgotResonse from './components/forgotResponse';
 
 
 const handleDragStart = (e) => e.preventDefault();
@@ -24,7 +27,17 @@ function App() {
       <div className='leftpart'>
         {/* <p><Register /></p> */}
         {/* <p><Login /></p> */}
-        <p><RegisterResonse /></p>
+        {/* <p><RegisterResonse /></p> */}
+
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/submit-request" element={<RegisterResonse />} />
+          <Route path='/forgotPassword' element={<Forgot />} />
+          <Route path='/submit-forgot' element={<ForgotResonse />} />
+        </Routes>
+      </BrowserRouter>
       
       </div>
     </div>

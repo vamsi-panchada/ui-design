@@ -5,7 +5,6 @@ import "./login.css";
 
 const Form = () => {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const navigate = useNavigate();
   
     const handleChange = (event) => {
@@ -13,8 +12,6 @@ const Form = () => {
   
       if (name === "email") {
         setEmail(value);
-      } else if (name === "password") {
-        setPassword(value);
       }
     };
   
@@ -24,17 +21,16 @@ const Form = () => {
         // console.log('Submitted');
       
         // Validate the form data
-        if (!password || !email) {
-          return alert("Please enter your email address and password.");
+        if (!email) {
+          return alert("Please enter your email address.");
         }
       
         // Submit the form data to a server
         const formData = new FormData();
         formData.append("email", email);
-        formData.append("password", password);
 
 
-        navigate('/submit-request');
+        navigate('/submit-forgot');
       };
   
     return (
@@ -46,21 +42,13 @@ const Form = () => {
           onChange={handleChange}
           placeholder="Email"
         /><br />
-        <input
-          type="text"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          placeholder="password"
-        /><br />
-        <button type="submit">Login</button>
+        <button type="submit">Submit</button>
       </form>
       
     );
   };
 
-
-export default class Register extends Component {
+export default class Forgot extends Component {
   render() {
     return (
       <div class='register'>
@@ -70,9 +58,11 @@ export default class Register extends Component {
                 AI powered personalization engine dedicated to understanding human tastes
             </p><br />
         </div>
+        <p class='requstaccess'>
+            Forgot Password
+            </p>
             <Form />
-            <a href='/forgotPassword'>Forgot Password</a>
-            <p>not a member ? <a href='/register'>request access</a></p>
+            <p>Go back to <a href='/'>login</a></p>
             <div className='footer'>
               <p><img className='crayonlogo' src='crayon-logo.png' />
                 <p>2020 All Rights Reserved by Crayon Data Pte Ltd and it’s registered trademark maya.ai</p></p>
