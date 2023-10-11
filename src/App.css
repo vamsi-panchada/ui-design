@@ -1,0 +1,26 @@
+.App {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.imgsrc {
+    object-fit:fill;
+}
+
+.sliderimg {
+    /* border: solid 10px black; */
+    width: 60%;
+    height: 1vh;
+    object-fit: cover;
+    padding: 10px;
+    margin-right: 10px;
+}
+.leftpart {
+    /* border: solid 10px black; */
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 10px;
+    padding: 10px;
+}

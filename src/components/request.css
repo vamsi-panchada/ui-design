@@ -1,0 +1,56 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+
+
+.mayalogo {
+    width: 96px;
+    height: 58px;
+}
+
+.logotext {
+    width: 396px;
+    color: #1C2C42;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.requstaccess {
+    width: 328.853px;
+    height: 18.667px;
+    flex-shrink: 0;
+    color: #1C2C42;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.crayonlogo {
+    padding-top: 20px;
+    width: 112px;
+    height: 42.894px;
+    flex-shrink: 0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+.header {
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
