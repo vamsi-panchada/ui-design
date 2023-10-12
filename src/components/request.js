@@ -2,9 +2,12 @@ import React, { Component, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./request.css";
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import { Col } from 'react-bootstrap';
 
 
-const Form = () => {
+const Form1 = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [reason, setReason] = useState("");
@@ -51,45 +54,104 @@ const Form = () => {
       };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          placeholder="Name"
-        /><br />
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          placeholder="Email"
-        /><br />
-        <input
-          type="text"
-          name="reason"
-          value={reason}
-          onChange={handleChange}
-          placeholder="Reson for request"
-        /><br />
-        <input
-          type="text"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          placeholder="password"
-        /><br />
-        <input
-          type="checkbox"
-          name="email_copy"
-          value={email_copy}
-          onChange={handleChange}
-          placeholder="email_copy"
-        />Send me a email copy<br />
-        {/* <input type="submit" /> */}
-        <Button variant="dark" type="submit">Submit</Button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Name</Form.Label>
+          {/* <Col sm="10"> */}
+            <Form.Control 
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleChange}
+              placeholder="Full Name" />
+          {/* </Col> */}
+          
+          </Form.Group>
+
+          <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Email address</Form.Label>
+          {/* <Col sm="10"> */}
+            <Form.Control 
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="Email" />
+          {/* </Col> */}
+          
+          </Form.Group>
+
+          <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Reason for Request</Form.Label>
+          {/* <Col sm="10"> */}
+            <Form.Control 
+              as="textarea"
+              row={5}
+              name="reason"
+              value={reason}
+              onChange={handleChange}
+              placeholder="Brief your requirementa & Approval.." />
+          {/* </Col> */}
+          
+          </Form.Group>
+
+          <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Check 
+            type="checkbox"
+                name="email_copy"
+                value={email_copy}
+                onChange={handleChange}
+                placeholder="email_copy"
+            /> <Form.Label>Send me a email Copy</Form.Label>
+            
+          </Form.Group>
+
+          <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlInput1">
+             <Button variant="dark" type="submit">Submit</Button>
+          </Form.Group>
+         
+
+          
+      </Form>
+      // <form onSubmit={handleSubmit}>
+      //   <input
+      //     type="text"
+      //     name="name"
+      //     value={name}
+      //     onChange={handleChange}
+      //     placeholder="Name"
+      //   /><br />
+      //   <input
+      //     type="email"
+      //     name="email"
+      //     value={email}
+      //     onChange={handleChange}
+      //     placeholder="Email"
+      //   /><br />
+      //   <input
+      //     type="text"
+      //     name="reason"
+      //     value={reason}
+      //     onChange={handleChange}
+      //     placeholder="Reson for request"
+      //   /><br />
+      //   <input
+      //     type="text"
+      //     name="password"
+      //     value={password}
+      //     onChange={handleChange}
+      //     placeholder="password"
+      //   /><br />
+      //   <input
+      //     type="checkbox"
+      //     name="email_copy"
+      //     value={email_copy}
+      //     onChange={handleChange}
+      //     placeholder="email_copy"
+      //   />Send me a email copy<br />
+      //   {/* <input type="submit" /> */}
+      //   <Button variant="dark" type="submit">Submit</Button>
+      // </form>
     );
   };
 
@@ -111,7 +173,7 @@ export default class Register extends Component {
             Request for access
             </p>
         </div>
-            <Form />
+            <Form1 />
             <div className='footer'>
                 <img className='crayonlogo' src='crayon-logo.png' />
                 <p>2020 All Rights Reserved by Crayon Data Pte Ltd and it’s registered trademark maya.ai</p>
