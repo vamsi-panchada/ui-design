@@ -8,7 +8,8 @@ import Register from './components/request';
 import RegisterResonse from './components/RegisterResponse';
 import Forgot from './components/forgot';
 import ForgotResonse from './components/forgotResponse';
-
+import LoginResponse from './components/loginResponse';
+import ResetCredentials from './components/ResetCredentials';
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -36,6 +37,8 @@ function App() {
           <Route path="/submit-request" element={<RegisterResonse />} />
           <Route path='/forgotPassword' element={<Forgot />} />
           <Route path='/submit-forgot' element={<ForgotResonse />} />
+          <Route path='/home' element={<LoginResponse />} />
+          <Route path='/reset' element={<ResetCredentials />} />
         </Routes>
       </BrowserRouter>
       

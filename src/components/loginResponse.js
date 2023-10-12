@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
-import "./forgotResponse.css";
+import "./loginResponse.css";
 
-export default class ForgotResonse extends Component {
+export default class LoginResonse extends Component {
   render() {
     return (
       <div class='register'>
@@ -12,17 +12,10 @@ export default class ForgotResonse extends Component {
             </p><br />
         </div>
 
-        <p class='requstaccess'>
-        <img src='forgot-logo.png' />
-            Forgot Password
-            </p>
-
         <div className='responseMessage'>
-            <p>Email has been sent to your inbox (srinivasan@crayondata.com) with magic link to reset your credential.</p>
-                <p>Reset magic link is valid for next 30 minutes</p>
+            <p>you have succesfully logged in.</p>
         </div>
 
-        <p>Go back to <a href='/reset'>login</a></p>
         <div className='footer'>
             <img className='crayonlogo' src='crayon-logo.png' />
             <p>2020 All Rights Reserved by Crayon Data Pte Ltd and it’s registered trademark maya.ai</p>

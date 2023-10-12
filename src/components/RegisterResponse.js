@@ -17,8 +17,8 @@ export default class RegisterResonse extends Component {
             <p>You can also write us at admin@maya.ai</p>
         </div>
 
-        <a href='/forgotPassword'>Forgot Password</a>
-        <a href='/register'>Register</a>
+        <a href='/'>Login</a>
+        {/* <a href='/register'>Register</a> */}
 
         <div className='footer'>
             <img className='crayonlogo' src='crayon-logo.png' />

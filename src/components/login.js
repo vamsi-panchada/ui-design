@@ -34,7 +34,7 @@ const Form = () => {
         formData.append("password", password);
 
 
-        navigate('/submit-request');
+        navigate('/home');
       };
   
     return (
