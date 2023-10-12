@@ -22,7 +22,7 @@ export default class ForgotResonse extends Component {
                 <p>Reset magic link is valid for next 30 minutes</p>
         </div>
 
-        <p>Go back to <a href='/reset'>login</a></p>
+        <p>Click here to <a href='/reset'>set password</a></p>
         <div className='footer'>
             <img className='crayonlogo' src='crayon-logo.png' />
             <p>2020 All Rights Reserved by Crayon Data Pte Ltd and it’s registered trademark maya.ai</p>

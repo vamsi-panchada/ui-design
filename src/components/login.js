@@ -1,9 +1,13 @@
 import React, { Component, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./login.css";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
-const Form = () => {
+const Form1 = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -38,23 +42,52 @@ const Form = () => {
       };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          placeholder="Email"
-        /><br />
-        <input
-          type="text"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          placeholder="password"
-        /><br />
-        <button type="submit">Login</button>
-      </form>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Email address</Form.Label>
+          {/* <Col sm="10"> */}
+            <Form.Control 
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="Email" />
+          {/* </Col> */}
+          
+          </Form.Group>
+          <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Password</Form.Label>
+          {/* <Col sm="10"> */}
+            <Form.Control 
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+              placeholder="Password" />
+              
+            {/* </Col> */}
+          </Form.Group>
+          <Button variant="dark" type="submit">Login</Button>
+
+        </Form>
+      // <form onSubmit={handleSubmit}>
+      //   <input
+      //     type="email"
+      //     name="email"
+      //     value={email}
+      //     onChange={handleChange}
+      //     placeholder="Email"
+      //   /><br />
+      //   <input
+      //     type="text"
+      //     name="password"
+      //     value={password}
+      //     onChange={handleChange}
+      //     placeholder="password"
+      //   /><br />
+      //   {/* <button type="submit">Login</button> */}
+      //   <Button variant="dark" type="submit">Login</Button>
+      // </form>
       
     );
   };
@@ -70,7 +103,7 @@ export default class Register extends Component {
                 AI powered personalization engine dedicated to understanding human tastes
             </p><br />
         </div>
-            <Form />
+            <Form1 />
             <a href='/forgotPassword'>Forgot Password</a>
             <p>not a member ? <a href='/register'>request access</a></p>
             <div className='footer'>

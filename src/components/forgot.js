@@ -1,9 +1,13 @@
 import React, { Component, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./login.css";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 
 
-const Form = () => {
+
+const Form1 = () => {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
   
@@ -34,16 +38,34 @@ const Form = () => {
       };
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          placeholder="Email"
-        /><br />
-        <button type="submit">Submit</button>
-      </form>
+      <Form onSubmit={handleSubmit}>
+          <Form.Group as={Row} className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Email address</Form.Label>
+          {/* <Col sm="10"> */}
+            <Form.Control 
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="Email" />
+          {/* </Col> */}
+          
+          </Form.Group>
+          
+          <Button variant="dark" type="submit">Submit</Button>
+
+        </Form>
+      // <form onSubmit={handleSubmit}>
+      //   <input
+      //     type="email"
+      //     name="email"
+      //     value={email}
+      //     onChange={handleChange}
+      //     placeholder="Email"
+      //   /><br />
+      //   {/* <button type="submit">Submit</button> */}
+      //   <Button variant="dark" type="submit">Submit</Button>
+      // </form>
       
     );
   };
@@ -62,8 +84,8 @@ export default class Forgot extends Component {
           <img src='forgot-logo.png' />
             Forgot Password
             </p>
-            <Form />
-            <p>Go back to <a href='/'>login</a></p>
+            <Form1 />
+            <p> Go back to <a href='/'>login</a></p>
             <div className='footer'>
               <p><img className='crayonlogo' src='crayon-logo.png' />
                 <p>2020 All Rights Reserved by Crayon Data Pte Ltd and it’s registered trademark maya.ai</p></p>

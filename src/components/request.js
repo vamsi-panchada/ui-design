@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./request.css";
+import Button from 'react-bootstrap/Button';
 
 
 const Form = () => {
@@ -86,7 +87,8 @@ const Form = () => {
           onChange={handleChange}
           placeholder="email_copy"
         />Send me a email copy<br />
-        <input type="submit" />
+        {/* <input type="submit" /> */}
+        <Button variant="dark" type="submit">Submit</Button>
       </form>
     );
   };

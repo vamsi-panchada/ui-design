@@ -11,6 +11,10 @@ import ForgotResonse from './components/forgotResponse';
 import LoginResponse from './components/loginResponse';
 import ResetCredentials from './components/ResetCredentials';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
